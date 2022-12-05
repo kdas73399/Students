@@ -1,0 +1,40 @@
+{% extends 'mainbase.html' %}
+{% load static %}
+{% block title %}signin{% endblock title %}
+
+    {% block content%}
+    <div style=" background-color: azure;
+    padding: 50px;
+    margin-top:  7%;
+    border: 1px dotted black;
+    border-radius: 35px;
+    margin-right:450px;
+    margin-left:450px">
+       
+        <div style=" display: flex; justify-content: center;">
+        <form>
+          <div style="padding-left:20px;">
+            <button type="button" class="btn btn-info" onclick="window.location.href='../signup'">Sign Up</button>
+            <button type="button" class="btn btn-info">Sign In</button>
+          </div>
+           <div class="d-flex justify-content-center" style="padding-top: 15px;">
+            <h3>SIGN IN</h3>
+           </div>
+                <div class="row d-block">
+                  <div class="col">
+                    <input type="email" class="form-control" placeholder="emailid">
+                  </div>
+                  <div class="col" style="padding-top: 25px;">
+                    <input type="password" class="form-control" placeholder="Password">
+                  </div>
+                </div>
+              <div style="padding-top:15px; padding-left:55px">
+            <button type="button" class="btn btn-info"> Sign In</button>
+              </div><br>
+              <div style="text-align:center;">
+                <a href="{% url 'forgot'%}" >Forgot Password</a>
+              </div>
+        </form>
+      </div>
+      {%endblock content%}
+        
